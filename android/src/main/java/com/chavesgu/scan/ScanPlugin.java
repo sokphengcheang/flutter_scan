@@ -48,7 +48,9 @@ public class ScanPlugin implements FlutterPlugin, MethodCallHandler, ActivityAwa
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
-    this.flutterPluginBinding = flutterPluginBinding;
+    channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "my_plugin");
+    channel.setMethodCallHandler(this);
+
   }
 
   private void configChannel(ActivityPluginBinding binding) {
