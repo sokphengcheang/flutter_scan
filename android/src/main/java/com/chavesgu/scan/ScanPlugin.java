@@ -48,7 +48,7 @@ public class ScanPlugin implements FlutterPlugin, MethodCallHandler, ActivityAwa
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
-    channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "my_plugin");
+    channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "com.chavesgu.scan");
     channel.setMethodCallHandler(this);
 
   }
